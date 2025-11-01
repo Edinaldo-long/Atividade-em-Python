@@ -1,0 +1,26 @@
+'''4 - Crie um algoritmo que receba uma temperatura em graus Celsius e a converta 
+para Fahrenheit, exibindo o resultado na tela. 
+Dica: utilize a fórmula F = (C * 9/5) + 32. '''
+
+#emoji
+ 
+termometro = "🌡️"
+
+# Solicita a temperatura em Celsius
+celsius = float(input(f"Digite a temperatura em °C: {termometro}"))
+
+# Converte para Fahrenheit
+fahrenheit = (celsius * 9/5) + 32
+
+# Classifica o clima
+if celsius < 15:
+    clima = "Frio ❄️"
+elif 15 <= celsius < 25:
+    clima = "Ameno 🌤️"
+else:
+    clima = "Quente ☀️"
+
+
+# Mostra o resultado
+print(f"{celsius:.2f}°C correspondem a {fahrenheit:.2f}°F. Clima: {clima}")
+
