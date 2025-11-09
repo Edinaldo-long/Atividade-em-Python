@@ -14,7 +14,7 @@ Pesquisar funcionários por setor.'''
 
 
 # Lista para armazenar os funcionários
-funcionarios = []
+listafuncionarios = []
 
 while True:
     print("Menu:")
@@ -35,30 +35,30 @@ while True:
         
         # Adiciona o funcionário à lista
         funcionario = {"nome": nome, "idade": idade, "setor": setor, "salario": salario}
-        funcionarios.append(funcionario)
+        listafuncionarios.append(funcionario)
         print(f"{nome} cadastrado com sucesso!\n")
     
     elif opcao == "2":
         # Mostrar todos os funcionários
-        if not funcionarios:
+        if not listafuncionarios:
             print("Nenhum funcionário cadastrado.\n")
         else:
             print("--- Lista de Funcionários ---")
-            for f in funcionarios:
-                print(f"Nome: {f['nome']} - Idade: {f['idade']} - Setor: {f['setor']} - Salário: R$ {f['salario']:.2f}")
+            for funcionario in listafuncionarios:
+                print(f"Nome: {funcionario['nome']} - Idade: {funcionario['idade']} - Setor: {funcionario['setor']} - Salário: R$ {funcionario['salario']:.2f}")
             print()
     
     elif opcao == "3":
         # Pesquisar por setor
         setor_busca = input("Digite o setor para pesquisar: ")
-        encontrados = [f for f in funcionarios if f['setor'].lower() == setor_busca.lower()]
+        encontrados = [funcionario for funcionario in listafuncionarios if funcionario['setor'].lower() == setor_busca.lower()]
         
         if not encontrados:
             print(f"Nenhum funcionário encontrado no setor {setor_busca}.\n")
         else:
             print(f"--- Funcionários no setor {setor_busca} ---")
-            for f in encontrados:
-                print(f"Nome: {f['nome']} - Idade: {f['idade']} - Salário: R$ {f['salario']:.2f}")
+            for funcionario in encontrados:
+                print(f"Nome: {funcionario['nome']} - Idade: {funcionario['idade']} - Salário: R$ {funcionario['salario']:.2f}")
             print()
     
     elif opcao == "4":
