@@ -1,4 +1,20 @@
 while True:
+    print (" 1 - Deseja continuar executando tabuada")
+    print(" 2 - Deseja sair ")
+    opcao = input("Escolha:")
+
+    if opcao == '1':
+        print("Continuar")
+    
+    elif opcao =='2':
+        print("Sair")
+
+    break
+else:
+    print("Opção inválida")
+
+
+while True:
 
     try:
 
