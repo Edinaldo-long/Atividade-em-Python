@@ -17,4 +17,6 @@ while True:
 # Exibindo os produtos cadastrados
 print("\n--- Produtos cadastrados ---")
 for produto in prateleira:
-    print(f"Produto: {produto['nome']} - Preço: R$ {produto['preco']:.2f} - Setor: {produto['setor']}")
+    print(f"Produto: {produto['nome']} )
+    print(f'Preço: R$ {produto['preco']:.2f})
+    print(f'Setor: {produto['setor']}
